@@ -5,10 +5,19 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+public enum CardType
+{
+    NONE,
+    Attack,
+    Skill,
+    Area
+}
+
 public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Transform parentReturn = null;
     public GameObject placeholder;
+    public CardType type;
 
     private Vector3 targetPos;
 

@@ -45,7 +45,6 @@ public class InputBehaviour : MonoBehaviour {
                 {
                     card = hit.transform;
                     plane.SetNormalAndPosition(Camera.main.transform.forward, card.position);
-                    Ray cardRay = Camera.main.ScreenPointToRay(Input.mousePosition);
                     float dist;
                     plane.Raycast(ray, out dist);
                     dragOffset = card.position - ray.GetPoint(dist);
